@@ -1,0 +1,47 @@
+# -*- coding:utf-8-*-
+from matplotlib import pyplot as plt
+#希尔排序
+def ShellSort(list,m):
+  
+  
+    gap = m/2     # gap = 5,2,1...
+    while gap > 0:  #
+        for i in range(gap,m):
+            if list[i]<list[i-gap]:
+                key=list[i]
+                j=i-gap
+                while j>=0 and list[j]>key:
+                    list[j+gap]=list[j]
+                    j-=gap
+                list[j+gap]=key
+        gap=gap/2
+    return list
+        
+   
+if __name__== '__main__':
+    list_0=[]
+    file=open('data_mining0420.txt')
+    lines=file.readlines()
+    for line in lines:
+        temp=line.strip('\n')
+        
+        list_0.append(int(temp))
+    N=len(list_0)
+    list_1 = ShellSort(list_0,N)
+    print list_1
+    print 'the min:',list_1[0]
+    print 'the median:',list_1[(N+1)/2]
+    print 'the max:',list_1[N-1]
+
+# 参数依次为list,抬头,X轴标签,Y轴标签,XY轴的范围
+
+def draw_hist(myList,Title,Xlabel,Ylabel,Xmin,Xmax,Ymin,Ymax):
+    plt.hist(myList,1000)
+    plt.xlabel(Xlabel)
+    plt.xlim(Xmin,Xmax)
+    plt.ylabel(Ylabel)
+    plt.ylim(Ymin,Ymax)
+    plt.title(Title)
+    plt.show()
+
+draw_hist(list_1,'Histogram','Number of input','Frequency',0.0,1000,0.0,30)   # 直方图展示
