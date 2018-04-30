@@ -1,7 +1,11 @@
 
-1. Create a folder (with your name) in https://github.com/guorules/dm/edit/master/Week_04-20
-2. Use https://github.com/guorules/dm/blob/master/Week_04-20/input.txt (one integer per line) as the input file and write a program (in any language) to do the following:
-(1) Read in the file (line by line) and store the integers into one data structure of your choice.
-(2) Compute the following stats: minimum, Q1, median, Q2, maximum, and output the values to standard output.
-(3) Draw the histogram for the given input.
-5. Check in your program (code) to your folder and upload the histogram as an image to your folder
+1. Create a folder (with your name) in https://github.com/guorules/dm/edit/master/Week_04-27
+2. Read through "Cosine Similarity" on page 15 and 16 of Lecture #3.
+3. Write a program (in any language) to read in document1.txt and document2.txt, and compute the frequency of the followinig keywords (case insensitive):
+(1) Messi
+(2) Barcelona
+(3) Suarez
+(4) Title
+(5) Soccer
+4. Compute the Cosine Similarity.
+5. Check in your program (code) to your folder and write the final result (cosine similarity) in a file called output.txt.
